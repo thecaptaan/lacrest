@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat.ttf");
+}
+
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url("../fonts/PlayfairDisplay.ttf");
+}
+
+:root {
+    --base-logo: #a26108;
+    --primary-color: #2b4870;
+    --secondary-text-color: #57585a;
+    --heading-text: "PlayfairDisplay", serif;
+    --body-text: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: var(--body-text);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--secondary-text-color);
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-text);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--base-logo);
+}
+
+a {
+    text-decoration: none;
+    color: var(--body-text);
+}
+
+
+ul {
+    list-style: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.cent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input__base {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--base-logo);
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.textarea__base {
+    width: 100%;
+    height: 150px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid var(--base-logo);
+}
+
+.textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    resize: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.button__base {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: var(--base-logo);
+    color: #fff;
+}
