@@ -16,11 +16,11 @@
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav class="nav row">
         <div class="nav_logo">
             <img src="./images/lacrest.png" class="logo" alt="La Crest Restaurant & Banquet">
         </div>
-
         <div class="nav__links__container">
             <div class="hamburger__menu">
                 <img src="./images/hamburger.svg" alt="Hamburger Menu" id="hamburger">
@@ -35,6 +35,7 @@
             </ul>
         </div>
     </nav>
+    <!-- Landing Page -->
     <div class="landing__banner" id="home">
         <section class="splide" aria-label="Splide Basic HTML Example">
             <div class="splide__track">
@@ -73,18 +74,18 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <div class="slide__upper__container">
+                                <div class="slide__upper__container" data-aos="fade-left">
                                     <div class="slide__upper__item col cent">
                                         <span class="slide__header">La Crest Restaurant & Banquet</span>
                                         <p class="slide__upper_p">La Crest Restaurant & Banquet is a multi-cuisine
                                             restaurant located in the heart
                                             of
-                                            the city of Vadodara. We serve a variety of cuisines including Indian,
+                                            the city of Gandhinagar. We serve a variety of cuisines including Indian,
                                             Chinese,
                                             Continental, Mexican, Italian, and Thai. We also have a banquet hall for all
                                             your
                                             special occasions.</p>
-                                        <button data-aos="zoom-in-up" class="learn__btn">Learn More</button>
+                                        <a href="#about"><button class="learn__btn">Learn More</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -124,18 +125,13 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <div class="slide__upper__container">
+                                <div class="slide__upper__container" data-aos="fade-left">
                                     <div class="slide__upper__item col cent">
-                                        <span class="slide__header">La Crest Banquet</span>
-                                        <p class="slide__upper_p">La Crest Restaurant & Banquet is a multi-cuisine
-                                            restaurant located in the heart
-                                            of
-                                            the city of Vadodara. We serve a variety of cuisines including Indian,
-                                            Chinese,
-                                            Continental, Mexican, Italian, and Thai. We also have a banquet hall for all
-                                            your
-                                            special occasions.</p>
-                                        <button data-aos="zoom-in-up" class="learn__btn">Learn More</button>
+                                        <span class="slide__header">La Crest Restaurant</span>
+                                        <p class="slide__upper_p">Indulge in a culinary journey at La Crest, Ahmedabad's
+                                            gastronomic haven, where global flavors and refined ambiance unite for an
+                                            unparalleled dining experience.</p>
+                                            <a href="#about"><button class="learn__btn">Learn More</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -175,18 +171,13 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <div class="slide__upper__container">
+                                <div class="slide__upper__container" data-aos="fade-left">
                                     <div class="slide__upper__item col cent">
-                                        <span class="slide__header">La Crest Restaurant & Banquet</span>
-                                        <p class="slide__upper_p">La Crest Restaurant & Banquet is a multi-cuisine
-                                            restaurant located in the heart
-                                            of
-                                            the city of Vadodara. We serve a variety of cuisines including Indian,
-                                            Chinese,
-                                            Continental, Mexican, Italian, and Thai. We also have a banquet hall for all
-                                            your
-                                            special occasions.</p>
-                                        <button data-aos="zoom-in-up" class="learn__btn">Learn More</button>
+                                        <span class="slide__header">La Crest Banquet</span>
+                                        <p class="slide__upper_p">Elevate your celebrations at La Crest Banquet,
+                                            offering a spacious and elegant venue that caters to diverse events,
+                                            ensuring a seamless blend of luxury and versatility.</p>
+                                            <a href="#about"><button class="learn__btn">Learn More</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +188,7 @@
         </section>
     </div>
     <!-- About Container -->
-    <div class="about__container row" id="about">
+    <div class="about__container row" id="about" data-aos="fade-up" data-aos-duration="3000">
         <div class="about__item about__img__container cent">
             <div class="round1">
                 <img src="./images/round1.jpg" alt="" class="round1__img">
@@ -209,7 +200,7 @@
                 <img src="./images/round3.jpg" alt="" class="round3__img">
             </div>
         </div>
-        <div class="about__item">
+        <div class="about__item cent">
             <div class="about__inner__item about__text__container cent">
                 <div class="about__text">
                     <span class="bracket__txt">[ Welcome To ]</span>
@@ -242,13 +233,13 @@
         </div>
     </div>
     <!-- List Of Ceremony -->
-    <div class="celebration__header cent" id="learnMore">
+    <div class="celebration__header cent" id="learnMore"  data-aos="fade-up" data-aos-duration="3000">
         <div class="col">
             <span class="bracket__txt">[ Great Place To Celebrate ]</span>
             <h2>We Arrange Function Like: </h2>
         </div>
     </div>
-    <div class="celebration__container cent">
+    <div class="celebration__container cent"  data-aos="fade-up" data-aos-duration="3000">
         <div class="celebration__item row">
             <div class="celebration__card">
                 <div class="side__height"></div>
@@ -333,9 +324,11 @@
         </div>
     </div>
     <!-- Banquet Container -->
-    <div class="banquet__container row" id="menu">
+    <div class="banquet__container row" id="menu"  data-aos="fade-up" data-aos-duration="3000">
         <div class="banquet__item banquet__text__container cent">
             <div class="banquet__text__item">
+                <span class="bracket__txt">[ Grand Banquet ]</span>
+                <h1>La Crest Restaurant & Banquet</h1>
                 <p> At La Crest Grand Banquet, we redefine celebrations with our distinctive offerings tailored to meet
                     your
                     event and conferencing needs. Our expansive and beautifully adorned banquet hall is designed to make
@@ -350,7 +343,7 @@
                 </p>
                 <div class="btn__grp">
                     <a href="#contact">
-                        <button class="learnMore">Learn More</button>
+                        <button class="learnMore">Inquiry Now</button>
                     </a>
                     <button id="menuBtn" class="menu">Choice Menu</button>
                 </div>
@@ -371,9 +364,12 @@
     <!-- Menu Modal -->
     <div class="menu__modal cent" id="menuModal">
         <div class="menu__item">
-            <div class="menu__header">
-                <span class="bracket__txt">[ Menu ]</span>
-                <h2>What We Serve</h2>
+            <div class="menu__header row">
+                <div class="menu__inner__header">
+                    <span class="bracket__txt">[ Menu ]</span>
+                    <h2>What We Serve</h2>
+                </div>
+                <div class="menu__close cent" id="menuClose">x</div>
             </div>
             <div class="menu__pdf__container row">
                 <div class="menu__card">
@@ -409,19 +405,73 @@
     <script>
         let menuBtn = document.getElementById("menuBtn");
         let menuModal = document.getElementById("menuModal");
-
+        let menuClose = document.getElementById("menuClose");
         menuBtn.addEventListener("click", (e) => {
             menuModal.classList.toggle('menu__show')
         })
+        menuClose.addEventListener("click", (e) => {
+            menuModal.classList.toggle('menu__show')
+        })
+
     </script>
+    <!-- Gallery -->
+    <div class="gallery__header cent" id="gallery">
+        <div class="gallery__title">
+            <span class="bracket__txt">[ Gallery ]</span>
+            <h2>Our Gallery</h2>
+        </div>
+    </div>
+    <div class="gallery__container">
+        <div class="gallery__item row">
+            <img src="./images/DSC01144-min.jpg" alt="" class="bigGallery">
+            <img src="./images/DSC01245-min.jpg" alt="" class="smallGallery">
+            <img src="./images/round2.jpg" alt="" class="smallGallery">
+        </div>
+        <div class="gallery__item row">
+            <img src="./images/DSC01280-min.jpg" alt="" class="bigGallery">
+            <img src="./images/2A2A3520-min.jpg" alt="" class="smallGallery">
+            <img src="./images/DSC01248-min.jpg" alt="" class="smallGallery">
+        </div>
+    </div>
+    <style>
+        .gallery__header {
+            padding-top: 5rem;
+            text-align: center;
+        }
+
+        .gallery__header h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .gallery__container {
+            width: 100%;
+            height: fit-content;
+            padding: 5rem 0;
+        }
+
+        .smallGallery,
+        .bigGallery {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .smallGallery {
+            width: calc(100% / 3);
+        }
+
+        .bigGallery {
+            width: calc(100% / 2);
+        }
+    </style>
     <!-- Testimonial Container -->
-    <div class="review__header cent" id="testimonial">
+    <div class="review__header cent" id="testimonial"  data-aos="fade-up" data-aos-duration="3000">
         <div class="col">
             <span class="bracket__txt">[ Testimonial ]</span>
             <h2>What User Say About Us</h2>
         </div>
     </div>
-    <div class="review__container cent">
+    <div class="review__container cent"  data-aos="fade-up" data-aos-duration="3000">
         <div class="review__item row">
             <div class="review__card">
                 <div class="user__review">
@@ -448,23 +498,16 @@
             </div>
             <div class="review__card">
                 <div class="user__review">
-                    The food is really good in taste.... but not the best in town... If we talk about service i did find
-                    the service a bit unprofessional in terms of serving the food... otherwise its all good.
-
+                    We have visited this place recently and we had an amazing experience there. Quality of food was
+                    amazing and ambience was also beautiful.
+                    Behavior of staff was also very sweet and kind. We will surely recommend everyone and visit again
+                    for sure.
                 </div>
                 <div class="col">
-                    <span class="user__name">Pall Thaker</span>
-                    <span>Local Guide</span>
+                    <span class="user__name">Jalshree Pancholi</span>
+                    <span>Customer</span>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="customer__review">
-        <div class="customer__review__description">
-
-        </div>
-        <div class="customer__details">
-            <h1></h1>
         </div>
     </div>
     <div class="getInTouch cent">
@@ -478,7 +521,7 @@
         </div>
     </div>
     <style>
-        
+
     </style>
     <div class="contact row" id="contact">
 
@@ -501,10 +544,6 @@
                 <div class="input__base">
                     <input class="input" type="email" autocomplete="email">
                 </div>
-                <label for="">Date</label>
-                <div class="input__base">
-                    <input class="input" type="date">
-                </div>
                 <label for="">Your Message</label>
                 <div class="textarea__base">
                     <textarea class="textarea" name="" id=""></textarea>
@@ -522,7 +561,7 @@
                     <img class="footer__logo" src="./images/lacrest.png" alt="">
                     <p>
                         La Crest Restaurant & Banquet is a multi-cuisine restaurant located in the heart of the city of
-                        Vadodara.
+                        Gandhinagar.
                     </p>
                 </div>
                 <div class="main__inner__footer">
@@ -531,7 +570,8 @@
                         <li>
                             <img class="link__img" src="./images/location.svg" alt="">
 
-                            <a href="">
+                            <a
+                                href="https://www.google.com/maps?ll=23.188386,72.61762&z=17&t=m&hl=en&gl=IN&mapclient=embed&cid=7953959113663857665">
                                 <span>La Crest Restaurant & Banquet</span>
                                 <span>LAKE, SUR/BLOCK 10/1, Gandhinagar Bypass Rd, opp. SARGASAN, Gandhinagar, Gujarat,
                                     382421</span>
@@ -545,30 +585,22 @@
                             <img src="./images/phone.svg" alt="" class="link__img">
                             <a href="tel:+919909999999">+91 99099 99999</a>
                         </li>
-                        <li>
-                            <img src="./images/phone.svg" alt="" class="link__img">
-                            <a href="mailto:" target="_blank"> </a>
-                        </li>
                 </div>
                 <div class="main__inner__footer">
                     <h3>Follow Us</h3>
                     <ul>
-                        <li><img src="./images/facebook.svg" alt="" class="link__img"><a
+                        <li><img src="./images/facebook.svg" alt="FaceBook" class="link__img"><a
                                 href="https://www.facebook.com/lacrestvadodara" target="_blank">Facebook</a></li>
-                        <li><img src="./images/instagram.svg" alt="" class="link__img"><a
+                        <li><img src="./images/instagram.svg" alt="Instagram" class="link__img"><a
                                 href="https://www.instagram.com/lacrestvadodara/" target="_blank">Instagram</a></li>
-                        <li><img src="./images/twitter.svg" alt="" class="link__img"><a
-                                href="https://www.zomato.com/vadodara/la-crest-restaurant-banquet-sayajigunj"
-                                target="_blank">Zomato</a></li>
-                        <li><a href="https://www.swiggy.com/restaurants/la-crest-restaurant-banquet-sayajigunj-vadodara-105983"
-                                target="_blank">Swiggy</a></li>
-                        <li><a href="https://www.tripadvisor.in/Restaurant_Review-g297612-d13333360-Reviews-La_Crest_Restaurant_Banquet-Vadodara_Vadodara_District_Gujarat.html"
-                                target="_blank">Trip Advisor</a></li>
+                        <li><img src="./images/twitter.svg" alt="Twitter" class="link__img"><a
+                                href="https://www.twitter.com/lacrestvadodara/" target="_blank">Twitter</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright__footer">
-                <span>Copyright © 2022 Dream Festiva by <a href="https://techdefenders.in/">Tech Defenders</a>. All
+                <span>Copyright © 2024 La Crest Restaurant & Banquet by <a href="https://techdefenders.in/">Tech
+                        Defenders</a>. All
                     Rights Reserved.</span>
             </div>
         </div>
@@ -590,11 +622,10 @@
     <script type="module">
         new Splide('.splide', {
             type: 'loop',
-            // autoplay: true,
+            autoplay: true,
             interval: 3000,
             rewind: true,
             pauseOnHover: false,
-            // arrows: false,
             pagination: false,
         }).mount();
     </script>
@@ -602,15 +633,15 @@
         document.addEventListener('DOMContentLoaded', () => {
             let arrowPrev = document.querySelector('.splide__arrow--prev');
             let arrowNext = document.querySelector('.splide__arrow--next');
-            arrowPrev.innerHTML = '<img src="./images/left.svg" width="40px" alt="">';
-            arrowNext.innerHTML = '<img src="./images/right.svg" width="40px" alt="">';
+            arrowPrev.innerHTML = '<img src="./images/left.svg" width="40px" alt="Left Arrow">';
+            arrowNext.innerHTML = '<img src="./images/right.svg" width="40px" alt="Right Arrow">';
         });
 
     </script>
     <script type="module">
         AOS.init();
     </script>
-
+    <script src="./index.js"></script>
 </body>
 
 </html>

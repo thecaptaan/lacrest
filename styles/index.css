@@ -25,6 +25,41 @@
     display: none;
 }
 
+.hamburger__show {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.hamburger__position {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.hamburger__position .hamburger__menu {
+    position: relative;
+    right: 0;
+    margin: auto;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.hamburger__position .nav__list {
+    padding-left: 30px;
+}
+
+.hamburger__position .nav__item a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 10px 0;
+    text-decoration: none;
+    transition: all .3s ease;
+}
 
 .landing__banner {
     width: 100%;
@@ -114,8 +149,10 @@
     position: absolute;
     z-index: 1;
     margin: auto;
-    top: 0;
-    margin-top: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -100px;
 }
 
 .slide__upper__container {
@@ -316,6 +353,19 @@
     margin: 5rem 0;
 }
 
+.menu__header {
+    text-align: center;
+}
+
+.menu__header .menu__inner__header {
+    flex: 1;
+}
+
+.menu__close {
+    cursor: pointer;
+    font-size: 2rem;
+}
+
 .banquet__item {
     width: 50%;
     height: 100%;
@@ -325,7 +375,9 @@
     padding-left: 100px;
     padding-right: 20px;
 }
-
+.banquet__text__item h1{
+    padding-bottom: 20px;
+}
 .banquet__text__item p:nth-child(2) {
     padding-top: 30px;
 }
@@ -426,6 +478,11 @@
 .menu__header {
     padding-bottom: 20px;
 }
+.menu__pdf__container h3{
+    color: #ffffff !important;
+    text-align: center;
+    padding-bottom: 10px;
+}
 
 .menu__card {
     width: 250px;
@@ -446,6 +503,7 @@
     object-fit: contain;
 }
 
+
 .menu__link {
     width: 100%;
     padding: 15px 20px;
@@ -455,6 +513,7 @@
 .menu__btn {
     border: none;
     padding: 10px 30px;
+    font-weight: 600;
     background-color: #ffffff;
 }
 
@@ -536,13 +595,12 @@
     filter: saturate(1.2);
 }
 
-
-
+/* Get In Touch Section */
 .getInTouch {
     width: 100%;
     height: fit-content;
     padding: 3rem 0;
-    background-image: url("./images/getInTouch.jpg");
+    background-image: url("../images/getInTouch.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -600,7 +658,10 @@
     width: 85%;
     height: 100%;
 }
-
+.footer__item h3{
+    color: #ffffff !important;
+    padding-bottom: 10px;
+}
 .main__footer {
     width: 100%;
     height: 100%;
@@ -611,7 +672,15 @@
     flex: 1;
     padding: 0 20px;
 }
-
+.main__inner__footer ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.main__inner__footer ul li img{
+    margin-right: 10px;
+}
 .footer__logo {
     width: 250px;
     height: 250px;
@@ -670,6 +739,19 @@
         display: none;
     }
 
+    .slide__back__anime svg {
+        width: 400px;
+    }
+
+    .slide__upper__item {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .slide__header {
+        font-size: 30px;
+    }
+
     .about__container {
         height: fit-content !important;
         flex-direction: column !important;
@@ -693,7 +775,6 @@
     .round3 {
         width: 150px !important;
         height: 150px !important;
-        margin: 0 !important;
     }
 
     .about__inner__item {
@@ -701,8 +782,22 @@
         padding: 10px 20px;
     }
 
-    .about__inner__item .about__txt {
+    .about__text {
+        width: 100% !important;
+    }
+
+    .img__container {
+        flex-direction: column !important;
+        height: fit-content !important;
+    }
+
+    .img__container .img__item {
         width: 100%;
+        height: 200px;
+    }
+
+    .celebration__card {
+        width: 90% !important;
     }
 
     .banquet__container {
@@ -749,11 +844,28 @@
 
     .menu__header {
         text-align: center;
+        flex-direction: column !important;
+    }
+    .menu__inner__header{
+        order: 2;
+    }
+    .menu__close{
+        order: 1;
+        flex: 1;
     }
 
     .menu__pdf__container {
         align-items: center;
         flex-direction: column;
+    }
+
+    .gallery__item {
+        flex-direction: column !important;
+    }
+
+    .gallery__item img {
+        width: 100% !important;
+        height: 200px !important;
     }
 
     .contact {
