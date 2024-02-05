@@ -62,6 +62,10 @@ ul {
     list-style: none;
 }
 
+#root{
+    height: 100vh;
+    width: 100%;
+}
 .row {
     display: flex;
     flex-direction: row;
