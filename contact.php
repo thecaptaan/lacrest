@@ -1,69 +1,56 @@
 <?php
-// Database connection parameters
-$host = "your_database_host";
-$username = "your_database_username";
-$password = "your_database_password";
-$database = "your_database_name";
+require_once 'vendor/autoload.php';
 
-// Connect to the database
-$conn = new mysqli($host, $username, $password, $database);
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Function to sanitize input data
-function sanitizeInput($data)
-{
-    return htmlspecialchars(trim($data));
-}
-
-// Initialize variables to store error messages
-$errors = array();
-
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
-    $fullName = sanitizeInput($_POST["full_name"]);
-    $email = sanitizeInput($_POST["email"]);
-    $date = sanitizeInput($_POST["date"]);
-    $message = sanitizeInput($_POST["message"]);
+    $fullName = $_POST["fullName"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
 
-    // Validate data
+    // Validate form data
+    $errors = [];
     if (empty($fullName)) {
-        $errors["full_name"] = "Full Name is required.";
+        $errors[] = "Full name is required";
     }
-
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors["email"] = "Valid email is required.";
+        $errors[] = "Valid email is required";
+    }
+    if (empty($message)) {
+        $errors[] = "Message is required";
     }
 
-    // Add additional validation for other fields if needed
-
-    // If there are no errors, insert data into the database
+    // If there are no errors, send the email
     if (empty($errors)) {
-        $sql = "INSERT INTO your_table_name (full_name, email, date, message) VALUES (?, ?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssss", $fullName, $email, $date, $message);
+        // Outlook SMTP settings
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host = 'smtp-mail.outlook.com';
+        $mail->Port = 587;
+        $mail->SMTPSecure = 'tls';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'automate.lacrest@outlook.com'; // Replace with your Outlook email
+        $mail->Password = 'MicATMaNsaTHA';
+        $mail->setFrom($email, $fullName);
+        $mail->addAddress($email);
+        $mail->Subject = "New message from $fullName";
+        $mail->Body = "Full Name: $fullName\nEmail: $email\nMessage:\n$message";
 
-        if ($stmt->execute()) {
-            $response = array("status" => "success", "message" => "Data successfully stored.");
+        // Try to send the email
+        try {
+            $mail->send();
+            $response = array('success' => true, 'message' => 'Email sent successfully!');
             echo json_encode($response);
-        } else {
-            $response = array("status" => "error", "message" => "Error storing data in the database.");
+        } catch (Exception $e) {
+            $response = array('success' => false, 'message' => 'Failed to send email. Please try again later.');
             echo json_encode($response);
         }
-
-        $stmt->close();
     } else {
-        // If there are errors, return the error messages
-        $response = array("status" => "error", "errors" => $errors);
+        // Return errors in JSON format
+        $response = array('success' => false, 'errors' => $errors);
         echo json_encode($response);
     }
 }
-
-// Close the database connection
-$conn->close();
-
 ?>
