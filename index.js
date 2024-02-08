@@ -22,11 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
             email: document.getElementById("email").value,
             message: document.getElementById("message").value
         };
-        let formData = new FormData(data);
-
+       
         fetch("contact.php", {
             method: "POST",
-            body: formData
+            body: data
         })
             .then(response => response.json())
             .then(data => {
