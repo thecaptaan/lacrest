@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 if (data.success) {
                     alert(data.message);
-                    form.reset();
+                    e.reset();
                 } else {
                     let errorMessage = "Failed to send email. Please check the following errors:\n";
                     data.errors.forEach(function (error) {
