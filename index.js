@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("contactForm").addEventListener("submit", (e) => {
         e.preventDefault();
         let data = {
-            name: document.getElementById("name").value,
+            fullName: document.getElementById("name").value,
             email: document.getElementById("email").value,
             message: document.getElementById("message").value
         };
